@@ -1,0 +1,75 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"BarcodeScanner\"><param name=\"ios-package\" value=\"CDVBarcodeScanner\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Notification\"><param name=\"ios-package\" value=\"CDVNotification\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"SplashScreen\"><param name=\"ios-package\" value=\"CDVSplashScreen\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.nutriscore.nutriscoreapp"
+        },
+        "cordova-plugin-barcodescanner": {
+            "PACKAGE_NAME": "com.nutriscore.nutriscoreapp"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "com.nutriscore.nutriscoreapp"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.nutriscore.nutriscoreapp"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "id": "cordova-plugin-barcodescanner.BarcodeScanner",
+            "file": "plugins/cordova-plugin-barcodescanner/www/barcodescanner.js",
+            "pluginId": "cordova-plugin-barcodescanner",
+            "clobbers": [
+                "cordova.plugins.barcodeScanner"
+            ]
+        },
+        {
+            "id": "cordova-plugin-dialogs.notification",
+            "file": "plugins/cordova-plugin-dialogs/www/notification.js",
+            "pluginId": "cordova-plugin-dialogs",
+            "merges": [
+                "navigator.notification"
+            ]
+        },
+        {
+            "id": "cordova-plugin-splashscreen.SplashScreen",
+            "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
+            "pluginId": "cordova-plugin-splashscreen",
+            "clobbers": [
+                "navigator.splashscreen"
+            ]
+        }
+    ],
+    "plugin_metadata": {
+        "cordova-plugin-whitelist": "1.2.2",
+        "cordova-plugin-barcodescanner": "0.7.0",
+        "cordova-plugin-dialogs": "1.2.1",
+        "cordova-plugin-splashscreen": "3.2.2"
+    }
+}

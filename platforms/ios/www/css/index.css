@@ -1,0 +1,18 @@
+.navbar
+{
+	color:  #4cd964 !important;
+	border-bottom-color:  #4cd964 !important;
+}
+
+.navbar:after
+{
+	background-color: #4cd964 !important;
+}
+
+.centerObj
+{
+	margin:  0 10%;
+	position: relative;
+	top: 50%;
+	transform: perspective(1px) translateY(-50%);
+}
